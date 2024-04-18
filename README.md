@@ -33,3 +33,9 @@ docker-compose.yml
       - ./scripts:/docker-entrypoint-initdb.d
 ```
 - execute all scripts in ```/docker-entrypoint-initdb.d ```
+---
+use 
+```pip freeze > requirements.txt
+```
+
+if you update your project
