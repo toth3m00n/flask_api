@@ -2,9 +2,11 @@
 
 ### Stack:
 
-### About
+### About:
 
-### Notes
+---
+
+### Notes:
 
 + Start database in docker + adminer
 ```angular2html
