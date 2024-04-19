@@ -13,12 +13,15 @@ class Config:
 class DevelopmentConfig(Config):
     url_object = URL.create(
         "postgresql+psycopg2",
-        username=os.environ.get('DB_USERNAME'),
-        password=os.environ.get('DB_PASSWORD'),
-        host=os.environ.get('DB_HOST'),
-        database=os.environ.get('DB_NAME')
+        username=os.getenv('DB_USERNAME'),
+        password=os.getenv('DB_PASSWORD'),
+        host=os.getenv('DB_HOST'),
+        database=os.getenv('DB_NAME'),
+        port=os.getenv('DB_PORT')
     )
     SQLALCHEMY_DATABASE_URI = url_object
+    
+    # SQLALCHEMY_ECHO = True
 
 
 class ProductionConfig(Config):
