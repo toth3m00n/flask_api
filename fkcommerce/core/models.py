@@ -83,4 +83,47 @@ class SeasonalEvent(db.Model):
     name = db.Column(db.String(100), unique=True)
     
     def __repr__(self):
-        return f'<Name: {self.id}>'
+        return f'<SeasonalEvent: {self.id}>'
+    
+    
+class Attribute(db.Model):
+    __tablename__ = 'attribute'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200))
+    description = db.Column(db.Text)
+
+    def __repr__(self):
+        return f'<Attribute: {self.name}>'
+
+
+class AttributeValue(db.Model):
+    __tablename__ = 'attribute_value'
+
+    id = db.Column(db.Integer, primary_key=True)
+    attribute_value = db.Column(db.String(100))
+    attribute_id = db.Column(db.Integer, db.ForeignKey('attribute.id'))
+
+    def __repr__(self):
+        return f'<AttributeValue: {self.attribute_value}>'
+
+
+class ProductType(db.Model):
+    __tablename__ = 'product_type'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    parent_id = db.Column(db.Integer, db.ForeignKey('product_type.id'))
+    
+    def __repr__(self):
+        return f'<ProductType: {self.name}>'
+    
+
+class ProductLine_AttributeValue(db.Model):
+    __tablename__ = 'product_line_attribute_value'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    
+    atribute_value_id = db.Column(db.Integer, db.ForeignKey('attribute_value.id'))
+    product_line_id = db.Column(db.Integer, db.ForeignKey('product_line.id'))
+    
