@@ -16,6 +16,9 @@ http://localhost:8080/
 ```
 ---
 
+### alembic command:
+you can access them in ```_docs```
+
 **!!!Important**
 
 **All passwords and other turnouts in  
@@ -38,3 +41,4 @@ use if you update your project
 ```
 pip freeze > requirements.txt
 ```
+
