@@ -10,7 +10,7 @@
 ```angular2html
 docker-compose up 
 ```
-access to adminer you may get in url:
+access to **adminer** you may get in url:
 ```angular2html
 http://localhost:8080/
 ```
@@ -23,9 +23,9 @@ env_vars - i did it specially to simplier development**
 
 ---
 
-db_setup.sh - create database fkcommerse and download extra extention
+**db_setup.sh** - create database fkcommerse and download extra extention
 
-*it happen bc** 
+*it happen bc*
 
 docker-compose.yml
 ```angular2html
@@ -34,8 +34,7 @@ docker-compose.yml
 ```
 - execute all scripts in ```/docker-entrypoint-initdb.d ```
 ---
-use 
-```pip freeze > requirements.txt
+use if you update your project
 ```
-
-if you update your project
+pip freeze > requirements.txt
+```
