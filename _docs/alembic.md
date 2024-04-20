@@ -4,8 +4,7 @@
 ```flask db init```
 
 ---
-+ create migration file
-```flask db migrate -m "initial migration"```
++ create migration file ```flask db migrate -m "initial migration"```
 
 ---
 
