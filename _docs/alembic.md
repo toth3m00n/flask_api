@@ -8,8 +8,7 @@
 
 ---
 
-+ migrate
-+ ```flask db upgrade```
++ migrate ```flask db upgrade```
 
 ---
 P.S. If you have for exemple
