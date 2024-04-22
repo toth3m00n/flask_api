@@ -13,7 +13,7 @@ class Category(db.Model):
     name = db.Column(db.String(100), unique=True, nullable=False)
     slug = db.Column(db.String(200), unique=True, nullable=False)
     is_active = db.Column(db.Boolean, default=True)
-    parent_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+    parent_id = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=True)
 
     def __repr__(self):
         return f'<Category {self.name}>'
